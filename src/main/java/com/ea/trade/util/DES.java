@@ -17,26 +17,6 @@ public class DES
     private Cipher encryptCipher = null;
     private Cipher decryptCipher = null;
 
-//    static{
-////    	ResourceBundle resourceBundle = ResourceBundle.getBundle("cfg_"+System.getenv("cfg.env")+".properties");
-////    	desDefaultKey = resourceBundle.getString("desDefaultKey");
-//    	
-//    	Properties prop = new Properties();  
-//    	try {
-//    		InputStream in = DES.class.getClassLoader().getResourceAsStream("cfg_"+System.getenv("cfg.env")+".properties");
-//			prop.load(in);
-//		} catch (IOException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//		}  
-//    	desDefaultKey = prop.getProperty("desDefaultKey");
-//    	System.out.println("desDefaultKey="+desDefaultKey);
-//    }
-//
-//
-//	public void setDesDefaultKey(String desDefaultKey) {
-//		DES.desDefaultKey = desDefaultKey;
-//	}
 
     
     /**
@@ -54,7 +34,8 @@ public class DES
      * @param strKey 指定的密钥
      * @throws Exception
      */
-    public DES(String strKey)
+    @SuppressWarnings("restriction")
+	public DES(String strKey)
         throws Exception
     {
         Security.addProvider(new com.sun.crypto.provider.SunJCE());

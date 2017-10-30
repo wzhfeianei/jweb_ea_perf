@@ -3,12 +3,16 @@ package com.ea.model.hele.transport;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 public class Fee {
-	private List<String> goodsId= new ArrayList<String>();
-	private List<Transfee> transfee= new ArrayList<>();
-	
+	@Resource
+	private Transfee transfee;
+	private List<String> goodsId = new ArrayList<String>();
+	private List<Transfee> transfeeList = new ArrayList<>();
+
 	public Fee() {
-		this.transfee.add(new Transfee());
+		this.transfeeList.add(transfee);
 	}
 
 	public List<String> getGoodsId() {
@@ -20,11 +24,11 @@ public class Fee {
 	}
 
 	public List<Transfee> getTransfee() {
-		return transfee;
+		return transfeeList;
 	}
 
 	public void setTransfee(List<Transfee> transfee) {
-		this.transfee = transfee;
+		this.transfeeList = transfee;
 	}
 
 }

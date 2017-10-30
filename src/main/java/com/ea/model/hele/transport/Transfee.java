@@ -1,5 +1,8 @@
 package com.ea.model.hele.transport;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Transfee {
 	private String feeType = "商家承担";
 	private String feeValue = "0.00";

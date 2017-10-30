@@ -17,8 +17,6 @@ public class RedisThread extends Thread {
 	}
 
 	public void run() {
-		// String phoneSmsKey = "cp:pcode:" + phone;
-		// String phoneSmsKeySeller = "p:pcode:" + phone;
 		String codekey = null;
 		String code = null;
 
